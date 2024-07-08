@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "392YcCVL46y4of1vVQloCF7/wLB6PzS+rsQPMYlxcE09eb8pz+ukGVLZ8F+gSOWBtTx3L89Hu52fMC36MBBNiA==",
+  "success": true,
+  "projectFilePath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj",
+  "expectedPackageFiles": [
+    "/home/danilo/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/danilo/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
