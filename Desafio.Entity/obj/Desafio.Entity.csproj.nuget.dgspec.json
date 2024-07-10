@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entities/Desafio.Entities.csproj": {}
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {}
   },
   "projects": {
-    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entities/Desafio.Entities.csproj": {
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entities/Desafio.Entities.csproj",
-        "projectName": "Desafio.Entities",
-        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entities/Desafio.Entities.csproj",
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj",
+        "projectName": "Desafio.Entity",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj",
         "packagesPath": "/home/danilo/.nuget/packages/",
-        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entities/obj/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/danilo/.nuget/NuGet/NuGet.Config"
