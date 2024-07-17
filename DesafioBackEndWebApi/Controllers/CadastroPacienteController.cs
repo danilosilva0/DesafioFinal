@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Desafio.Entity.DTO;
+using Desafio.Entity.Model;
+using Desafio.Service.Interface.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioBackEndWebApi.Controllers
@@ -23,18 +26,18 @@ namespace DesafioBackEndWebApi.Controllers
         }
 
         [HttpPost("InserirPaciente")]
-        public async Task<List<PacienteDTO>> InserirPaciente(PacienteModel novoPaciente){
-            return await _pacienteService.InserirPaciente(novoPaciente);
+        public void InserirPaciente(PacienteModel novoPaciente){
+            _pacienteService.InserirPaciente(novoPaciente);
         }
 
         [HttpPut("AlterarPaciente")]
-        public async Task<List<PacienteDTO>> AlterarPaciente(string nomePaciente, string novoNomePaciente){
-            return await _pacienteService.AlterarPaciente(nomePaciente, novoNomePaciente);
+        public void AlterarPaciente(int id, PacienteModel pacienteModel){
+            _pacienteService.AlterarPaciente(id, pacienteModel);
         }
 
         [HttpDelete("DeletarPaciente")]
-        public async Task<List<PacienteDTO>> DeletarPaciente(string nomePaciente){
-            return await _pacienteService.DeletarPaciente(nomePaciente);
+        public void DeletarPaciente(int id){
+            _pacienteService.DeletarPaciente(id);
         }
     }
 }

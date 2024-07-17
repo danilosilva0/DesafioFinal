@@ -1,3 +1,13 @@
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Desafio.Entity
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Desafio.Entity.deps.json
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Desafio.Entity.runtimeconfig.json
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Desafio.Entity.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/ref/Desafio.Entity.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Desafio.Entity.pdb
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.csproj.AssemblyReference.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.GeneratedMSBuildEditorConfig.editorconfig
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.AssemblyInfoInputs.cache
@@ -5,3 +15,11 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.csproj.CoreCompileInputs.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.MvcApplicationPartsAssemblyInfo.cs
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.MvcApplicationPartsAssemblyInfo.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/staticwebassets.build.json
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/staticwebassets.development.json
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/scopedcss/bundle/Desafio.Entity.styles.css
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.csproj.CopyComplete
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/ref/Desafio.Entity.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.pdb
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/Debug/net6.0/Desafio.Entity.genruntimeconfig.cache

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Desafio.Service.Interface;
-using Desafio.Entities;
 using Desafio.Repository.Interface;
 using Desafio.Helper.Exceptions;
-using Desafio.Helper.Messages;
+using Desafio.Service.Interface.Services;
+using Desafio.Entity.Model;
+using Desafio.Entity.DTO;
+using Desafio.Repository.Interface.IRepositories;
 using log4net;
+using Desafio.Entity.Entities;
+using ControleTarefas.Helper.Messages;
 
 namespace Desafio.Service.Services
 {
@@ -15,43 +19,41 @@ namespace Desafio.Service.Services
     {
         private static readonly ILog _log = LogManager.GetLogger(typeof(PacienteService));
         private readonly IPacienteRepository _pacienteRepository;
-        public PacienteNegocio(IPacienteRepository pacienteRepository)
+        public PacienteService(IPacienteRepository pacienteRepository)
         {
             _pacienteRepository = pacienteRepository;
         }
 
-        public async Task<List<PacienteDTO>> InserirPaciente(CadastroPacienteModel novoPaciente)
+        public async void InserirPaciente(PacienteModel novoPaciente)
         {
-            var paciente = await _pacienteRepository.ObterPaciente(new PacienteFiltro() { Email = novoPaciente.Email });
+            var pacienteDTO = await _pacienteRepository.BuscarPorNome(novoPaciente.Nome);
 
-            if (paciente != null)
+            if (pacienteDTO.Count > 0)
             {
-                _log.InfoFormat(BusinessMessages.RegistroExistente, paciente.Nome);
-                throw new BusinessException(string.Format(BusinessMessages.RegistroExistente, paciente.Nome));
+                _log.InfoFormat(ServiceMessages.ExistentRegister, pacienteDTO[0].Nome);
+                throw new ServiceException(string.Format(ServiceMessages.ExistentRegister, pacienteDTO[0].Nome));
             }
 
-            paciente = CriarPaciente(novoPaciente);
+            var paciente = CriarPaciente(novoPaciente);
 
             await _pacienteRepository.Inserir(paciente);
 
             //_log.InfoFormat("A tarefa '{0}' foi inserida.", novaTarefa); 
-
-            return await _pacienteRepository.ListarTodos();
         }
 
-        private static Paciente CriarPaciente(CadastroPacienteModel novoPaciente)
+        private static Paciente CriarPaciente(PacienteModel novoPaciente)
         {
             var paciente = new Paciente
             {
                 Nome = novoPaciente.Nome,
-                DataNascimento = novoPaciente.Perfil,
+                DataNascimento = novoPaciente.DataNascimento,
                 DataCriacao = DateTime.Now
             };
 
             return paciente;
         }
 
-        public async Task<List<PacienteDTO>> AlterarPaciente(int id, CadastroPacienteModel pacienteAtualizado)
+        public async void AlterarPaciente(int id, PacienteModel pacienteAtualizado)
         {
             ValidarPaciente(pacienteAtualizado.Nome);
             var paciente = await _pacienteRepository.ObterPorId(id);
@@ -66,13 +68,11 @@ namespace Desafio.Service.Services
             else
             {
                 _log.InfoFormat("O paciente com ID '{0}' não existe.", id);
-                throw new BusinessException($"O paciente com ID '{id}' não existe.");
+                throw new ServiceException($"O paciente com ID '{id}' não existe.");
             }
-
-            return await ListarPacientes();
         }
 
-        public async Task<List<PacienteDTO>> DeletarPaciente(int id)
+        public async void DeletarPaciente(int id)
         {
             var paciente = await _pacienteRepository.ObterPorId(id);
 
@@ -84,10 +84,8 @@ namespace Desafio.Service.Services
             else
             {
                 _log.InfoFormat("O paciente com ID '{0}' não existe.", id);
-                throw new BusinessException(string.Format(BusinessMessages.RegistroNaoEncontrado, id));
+                throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, id));
             }
-
-            return await ListarPacientes();
         }
 
         public async Task<PacienteDTO> ObterPacientePorId(int id)
@@ -95,11 +93,11 @@ namespace Desafio.Service.Services
             var paciente = await _pacienteRepository.ObterPorId(id);
 
             if (paciente == null)
-                throw new BusinessException(string.Format(BusinessMessages.RegistroNaoEncontrado, id));
+                throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, id));
 
             return new PacienteDTO
             {
-                Id = paciente.Id,
+                IdPaciente = paciente.IdPaciente,
                 Nome = paciente.Nome,
                 DataNascimento = paciente.DataNascimento,
                 DataCriacao = paciente.DataCriacao
@@ -115,7 +113,7 @@ namespace Desafio.Service.Services
             {
                 pacientesDTO.Add(new PacienteDTO
                 {
-                    Id = paciente.Id,
+                    IdPaciente = paciente.IdPaciente,
                     Nome = paciente.Nome,
                     DataNascimento = paciente.DataNascimento,
                     DataCriacao = paciente.DataCriacao
@@ -128,7 +126,7 @@ namespace Desafio.Service.Services
         private static void ValidarPaciente(string nome)
         {
             if (string.IsNullOrEmpty(nome))
-                throw new BusinessException(string.Format(BusinessMessages.CampoObrigatorio, "Nome"));
+                throw new ServiceException(string.Format(ServiceMessages.Required, "Nome"));
         }
     }
 }

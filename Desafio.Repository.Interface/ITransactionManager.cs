@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Desafio.Repository.Interface
 {
-    public class ITransactionManager
+    public interface ITransactionManager
     {
         Task BeginTransactionAsync(IsolationLevel isolationLevel);
         Task CommitTransactionsAsync();

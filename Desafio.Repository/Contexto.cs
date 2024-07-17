@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Desafio.Entity.Entities;
 using Microsoft.EntityFrameworkCore;
-using Desafio.Entities;
 
 namespace Desafio.Repository
 {

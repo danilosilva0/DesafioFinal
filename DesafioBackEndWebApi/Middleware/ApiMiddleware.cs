@@ -12,6 +12,10 @@ using Desafio.Repository.Interface;
 // using Desafio.Helper.Messages;
 // using Desafio.Helper.Responses;
 using log4net;
+using Desafio.Helper.Attributes;
+using Desafio.Helper.Responses;
+using Desafio.Helper.Exceptions;
+using ControleTarefas.Helper.Messages;
 
 namespace DesafioBackEndWebApi.Middleware
 {
@@ -28,7 +32,7 @@ namespace DesafioBackEndWebApi.Middleware
         {
             Stopwatch stopwatch = new();
             stopwatch.Start();
-            var transactionRequired = context.Features.Get<IEndpointFeature>()?.Endpoint?.Metadata.GetMetadata<TransactionRequiredAttribute>();
+            var transactionRequired = context.Features.Get<IEndpointFeature>()?.Endpoint?.Metadata.GetMetadata<RequiredTransactionAttribute>();
 
             try
             {
@@ -74,11 +78,11 @@ namespace DesafioBackEndWebApi.Middleware
 
             switch (exception)
             {
-                case BusinessException:
+                case ServiceException:
                     messages.Add(exception.Message);
                     break;
-                case BusinessListException:
-                    messages = ((BusinessListException)exception).Messages;
+                case ServiceListException:
+                    messages = ((ServiceListException)exception).Messages;
                     break;
                 default:
                     messages.Add(string.Format(InfraMessages.UnexpectedError));

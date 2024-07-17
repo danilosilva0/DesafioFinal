@@ -147,7 +147,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -208,7 +212,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -221,6 +232,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.30, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.30, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.30, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -269,7 +296,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -330,7 +361,20 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -346,6 +390,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.17, )"
             }
           },
           "imports": [
@@ -391,7 +439,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -487,18 +542,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[6.0.29, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"

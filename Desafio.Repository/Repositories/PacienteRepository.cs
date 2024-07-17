@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Desafio.Entity.DTO;
+using Desafio.Entity.Entities;
+using Desafio.Repository.Interface.IRepositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace Desafio.Repository.Repositories
@@ -23,9 +26,9 @@ namespace Desafio.Repository.Repositories
             return query.ToListAsync();
         }
 
-        public Task<Paciente> ObterPorNome(string nome)
+        public Task<Paciente> ObterPorId(int id)
         {
-            return EntitySet.FirstOrDefaultAsync(paciente => paciente.Nome == nome);
+            return EntitySet.FirstOrDefaultAsync(paciente => paciente.IdPaciente == id);
         }
 
         public Task<List<PacienteDTO>> BuscarPorNome(string nome)
@@ -39,6 +42,11 @@ namespace Desafio.Repository.Repositories
                                 });
 
             return query.ToListAsync();
+        }
+
+        public Task<Paciente> ObterPorNome(string nome)
+        {
+            throw new NotImplementedException();
         }
     }
 }

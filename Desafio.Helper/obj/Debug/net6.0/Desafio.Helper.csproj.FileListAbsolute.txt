@@ -11,6 +11,9 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.csproj.AssemblyReference.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.Messages.InfraMessages.resources
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.Messages.ServiceMessages.resources
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.csproj.GenerateResource.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.GeneratedMSBuildEditorConfig.editorconfig
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.AssemblyInfoInputs.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.AssemblyInfo.cs

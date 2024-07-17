@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Desafio.Repository.Interface.IRepositories;
 
 namespace Desafio.Repository.Repositories
 {
-    public class BaseRepository<TEntidade> : IRepositorioBase<TEntidade> where TEntidade : class
+    public class BaseRepository<TEntidade> : IBaseRepository<TEntidade> where TEntidade : class
     {
         protected readonly Contexto _contexto;
         protected virtual DbSet<TEntidade> EntitySet { get; }
 
-        public RepositorioBase(Contexto contexto)
+        public BaseRepository(Contexto contexto)
         {
             _contexto = contexto;
             EntitySet = _contexto.Set<TEntidade>();

@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Desafio.Entity.DTO;
+using Desafio.Entity.Model;
+using Desafio.Service.Interface.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DesafioBackEndWebApi.Controllers
 {
@@ -21,18 +25,18 @@ namespace DesafioBackEndWebApi.Controllers
         }
 
         [HttpPost("InserirAgendamento")]
-        public async Task<List<AgendamentoDTO>> InserirAgendamento(AgendamentoModel novoAgendamento){
-            return await _agendamentoService.InserirAgendamento(novoAgendamento);
+        public void InserirAgendamento(AgendamentoModel novoAgendamento){
+            _agendamentoService.InserirAgendamento(novoAgendamento);
         }
 
         [HttpPut("AlterarAgendamento")]
-        public async Task<List<AgendamentoDTO>> AlterarAgendamento(string nomeAgendamento, string novoNomeAgendamento){
-            return await _agendamentoService.AlterarAgendamento(nomeAgendamento, novoNomeAgendamento);
+        public void AlterarAgendamento(AgendamentoModel novoAgendamento){
+            _agendamentoService.AlterarAgendamento(novoAgendamento);
         }
 
         [HttpDelete("DeletarAgendamento")]
-        public async Task<List<AgendamentoDTO>> DeletarAgendamento(string nomeAgendamento){
-            return await _agendamentoService.DeletarAgendamento(nomeAgendamento);
+        public void DeletarAgendamento(AgendamentoModel novoAgendamento){
+            _agendamentoService.DeletarAgendamento(novoAgendamento.IdAgendamento);
         }
     }
 }

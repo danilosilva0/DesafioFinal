@@ -10,6 +10,8 @@ using DesafioBackEndWebApi.Middleware;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Desafio.Repository.Interface;
+using Desafio.Repository;
+using Desafio.Helper.PacienteContexto;
 
 namespace DesafioBackEndWebApi.Configuration
 {
@@ -17,28 +19,28 @@ namespace DesafioBackEndWebApi.Configuration
     {
         public static void AddDependencyInjectionConfiguration(this IServiceCollection services, IConfiguration configuracao)
         {
-            InjetarRepositorio(services);
-            InjetarNegocio(services);
-            InjetarMiddleware(services);
+            InjectRepository(services);
+            InjectService(services);
+            InjectMiddleware(services);
 
-            services.AddScoped<ITransactionManager, GerenciadorTransacao>();
+            services.AddScoped<ITransactionManager, TransactionManager>();
             services.AddScoped<IPacienteContexto, PacienteContexto>();
-            services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
+            // services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
         }
 
-        private static void InjetarMiddleware(IServiceCollection services)
+        private static void InjectMiddleware(IServiceCollection services)
         {
             services.AddTransient<ApiMiddleware>();
             services.AddTransient<PacienteContextoMiddleware>();
         }
 
-        private static void InjetarNegocio(IServiceCollection services)
+        private static void InjectService(IServiceCollection services)
         {
             services.AddScoped<IAgendamentoService, AgendamentoService>();
             services.AddScoped<IPacienteService, PacienteService>();
         }
 
-        private static void InjetarRepositorio(IServiceCollection services)
+        private static void InjectRepository(IServiceCollection services)
         {
             services.AddScoped<IAgendamentoRepository, AgendamentoRepository>();
             services.AddScoped<IPacienteRepository, PacienteRepository>();

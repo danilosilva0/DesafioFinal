@@ -8,6 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="log4net" Version="2.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Desafio.Helper\Desafio.Helper.csproj" />
+    <ProjectReference Include="..\Desafio.Repository.Interface\Desafio.Repository.Interface.csproj" />
+    <ProjectReference Include="..\Desafio.Service.Interface\Desafio.Service.Interface.csproj" />
+    <ProjectReference Include="..\Desafio.Validators\Desafio.Validators.csproj" />
   </ItemGroup>
 
 </Project>

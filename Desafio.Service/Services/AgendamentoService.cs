@@ -2,6 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ControleTarefas.Helper.Messages;
+using Desafio.Entity.DTO;
+using Desafio.Entity.Entities;
+using Desafio.Entity.Model;
+using Desafio.Helper.Exceptions;
+using Desafio.Repository.Interface.IRepositories;
+using Desafio.Service.Interface.Services;
+using log4net;
 
 namespace Desafio.Service.Services
 {
@@ -14,82 +22,95 @@ namespace Desafio.Service.Services
             _agendamentoRepository = agendamentoRepository;
         }
 
-        public Task<List<AgendamentoDTO>> ListarAgendamentos(List<string> agendamentos)
+        public Task<List<AgendamentoDTO>> ListarAgendamentos()
         {
-            if (agendamentos == null)
-            {
-                return _agendamentoRepository.ListarTodas();
-            }
-            else
-            {
-                agendamentos = agendamentos.Select(e => e.ToUpper())
-                                 .ToList();
+            // if (agendamentos == null)
+            // {
+                return _agendamentoRepository.ListarTodos();
+            // }
+            // else
+            // {
+            //     agendamentos = agendamentos.Select(e => e.ToUpper())
+            //                      .ToList();
 
-                return _agendamentoRepository.ListarAgendamentos(agendamentos);
-            }
+            //     // return _agendamentoRepository.ListarAgendamentos(agendamentos);
+            //     return _agendamentoRepository.ListarTodos();
+            // }
         }
 
-        public async Task<List<AgendamentoDTO>> InserirAgendamento(CadastroAgendamentoModel novoAgendamento)
+        public async void InserirAgendamento(AgendamentoModel novoAgendamento)
         {
-            ValidarAgendamento(novoAgendamento.Titulo);
+            // ValidarAgendamento(novoAgendamento.Titulo);
 
-            var agendamento = await _agendamentoRepository.ObterAgendamento(novoAgendamento.Titulo);
+            var agendamentoDTO = await _agendamentoRepository.ObterAgendamentoPorId(novoAgendamento.IdAgendamento);
 
-            if (agendamento != null)
-                throw new BusinessException(string.Format(BusinessMessages.RegistroExistente, "Título"));
+            if (agendamentoDTO != null)
+                throw new ServiceException(string.Format(ServiceMessages.ExistentRegister, "Id"));
             
-            agendamento = new Agendamento(novoAgendamento.Titulo);
+            var agendamento = CriarAgendamento(novoAgendamento);
 
             await _agendamentoRepository.Inserir(agendamento);
 
             // _log.InfoFormat("O agendamento '{0}' foi inserida.", novoAgendamento);
-            
-            return await _agendamentoRepository.ListarTodas();
         }
 
-        public async Task<List<AgendamentoDTO>> AlterarAgendamento(string nomeAgendamento, string novoNomeAgendamento)
+        private static Agendamento CriarAgendamento(AgendamentoModel novoAgendamento)
         {
-            ValidarAgendamento(novoNomeAgendamento);
-            var agendamento = await _agendamentoRepository.ObterAgendamento(nomeAgendamento);
+            var agendamento = new Agendamento
+            {
+                IdPaciente = novoAgendamento.IdPaciente,
+                DataAgendamento = novoAgendamento.DataAgendamento,
+                HoraAgendamento = novoAgendamento.HoraAgendamento,
+                Status = novoAgendamento.Status,
+                DataCriacao = DateTime.Now
+            };
+            return agendamento;
+        }
+
+        public async void AlterarAgendamento(AgendamentoModel novoAgendamento)
+        {
+            ValidarAgendamento(novoAgendamento);
+            var agendamento = await _agendamentoRepository.ObterAgendamentoPorId(novoAgendamento.IdAgendamento);
 
             if (agendamento != null)
             {
-                agendamento.Titulo = novoNomeAgendamento;
+                agendamento.IdPaciente = novoAgendamento.IdPaciente;
+                agendamento.DataAgendamento = novoAgendamento.DataAgendamento;
+                agendamento.HoraAgendamento = novoAgendamento.HoraAgendamento;
+                agendamento.Status = novoAgendamento.Status;
                 await _agendamentoRepository.Atualizar(agendamento);
-                _log.InfoFormat("A agendamento '{0}' foi atualizada para o nome {1}.", nomeAgendamento, novoNomeAgendamento);
+                _log.InfoFormat("O agendamento '{0}' foi atualizado para o nome {1}.", agendamento.IdAgendamento, novoAgendamento.IdAgendamento);
             }
             else
             {
-                _log.InfoFormat("A agendamento '{0}' não existe na base.", nomeAgendamento);
-                throw new BusinessException($"A agendamento '{nomeAgendamento}' não existe na base.");
+                _log.InfoFormat("O agendamento '{0}' não existe na base.", novoAgendamento.IdAgendamento);
+                throw new ServiceException($"O agendamento '{novoAgendamento.IdAgendamento}' não existe na base.");
             }
-
-            return await _agendamentoRepository.ListarTodas();
         }
 
-        public async Task<List<AgendamentoDTO>> DeletarAgendamento(string nomeAgendamento)
+        public async void DeletarAgendamento(int id)
         {
-            ValidarAgendamento(nomeAgendamento);
-            var agendamento = await _agendamentoRepository.ObterAgendamento(nomeAgendamento);
+            var agendamento = await _agendamentoRepository.ObterAgendamentoPorId(id);
 
             if (agendamento != null)
             {
                 await _agendamentoRepository.Deletar(agendamento);
-                _log.InfoFormat("A agendamento '{0}' foi removida.", nomeAgendamento);
+                _log.InfoFormat("A agendamento '{0}' foi removida.", id);
             }
             else
             {
-                _log.InfoFormat("A agendamento '{0}' não existe na base.", nomeAgendamento);
-                throw new BusinessException(string.Format(BusinessMessages.RegistroNaoEncontrado, nomeAgendamento));
+                _log.InfoFormat("A agendamento '{0}' não existe na base.", id);
+                throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, id));
             }
-
-            return await _agendamentoRepository.ListarTodas();
         }
 
-        private static void ValidarAgendamento(string titulo)
+        private static void ValidarAgendamento(AgendamentoModel novoAgendamento)
         {
-            if (string.IsNullOrEmpty(titulo))
-                throw new BusinessException(string.Format(BusinessMessages.CampoObrigatorio, "Título"));
+            if (novoAgendamento.DataAgendamento < DateTime.Now)
+                throw new ServiceException(string.Format(ServiceMessages.InvalidInput, "Data do Agendamento"));
+
+            if (novoAgendamento.HoraAgendamento < DateTime.Now.TimeOfDay)
+                throw new ServiceException(string.Format(ServiceMessages.InvalidInput, "Hopa do Agendamento"));
         }
     }
 }

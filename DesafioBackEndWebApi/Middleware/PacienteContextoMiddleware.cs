@@ -2,21 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DesafioFinalBack.Utilities.Extensions;
-using DesafioFinalBack.Utilities.UserContext;
 using System.Collections;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using Desafio.Helper.PacienteContexto;
 
 namespace DesafioBackEndWebApi.Middleware
 {
     public class PacienteContextoMiddleware : IMiddleware
     {
-        private readonly IUserContext _userContext;
+        private readonly IPacienteContexto _pacienteContexto;
 
-        public PacienteContextoMiddleware(IUserContext userContext)
+        public PacienteContextoMiddleware(IPacienteContexto pacienteContexto)
         {
-            _userContext = userContext;
+            _pacienteContexto = pacienteContexto;
         }
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
@@ -66,9 +65,9 @@ namespace DesafioBackEndWebApi.Middleware
 
         private void SetUserContext(HttpContext context, JwtSecurityToken securityToken)
         {
-            _userContext.RequestId = Guid.NewGuid();
-            _userContext.StartDateTime = DateTime.UtcNow;
-            _userContext.SourceInfo = new SourceInfo
+            _pacienteContexto.RequestId = Guid.NewGuid();
+            _pacienteContexto.StartDateTime = DateTime.UtcNow;
+            _pacienteContexto.SourceInfo = new SourceInfo
             {
                 IP = context?.Connection?.RemoteIpAddress,
                 Data = GetAllHeaders(context)
@@ -80,9 +79,9 @@ namespace DesafioBackEndWebApi.Middleware
                 var roles = securityToken.Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).ToList();
                 var login = securityToken.Claims.FirstOrDefault(c => c.Type == "login")?.Value;
 
-                _userContext.AddData("userName", userName);
-                _userContext.AddData("roles", roles);
-                _userContext.AddData("login", login);
+                // _pacienteContexto.AddData("userName", userName);
+                // _pacienteContexto.AddData("roles", roles);
+                // _pacienteContexto.AddData("login", login);
             }
         }
 
