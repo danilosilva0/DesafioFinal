@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Repository", "Desaf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Repository.Interface", "Desafio.Repository.Interface\Desafio.Repository.Interface.csproj", "{521C95F9-0AE5-47E8-B28D-2E03FEDA8D90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desafio.Helper", "Desafio.Helper\Desafio.Helper.csproj", "{C04517EC-B38A-4577-B0CA-C714A0C61F1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,5 +56,9 @@ Global
 		{521C95F9-0AE5-47E8-B28D-2E03FEDA8D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{521C95F9-0AE5-47E8-B28D-2E03FEDA8D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{521C95F9-0AE5-47E8-B28D-2E03FEDA8D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04517EC-B38A-4577-B0CA-C714A0C61F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04517EC-B38A-4577-B0CA-C714A0C61F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04517EC-B38A-4577-B0CA-C714A0C61F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04517EC-B38A-4577-B0CA-C714A0C61F1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

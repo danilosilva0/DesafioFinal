@@ -1,0 +1,7 @@
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.AssemblyReference.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.GeneratedMSBuildEditorConfig.editorconfig
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfoInputs.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfo.cs
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.CoreCompileInputs.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cs
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cache
