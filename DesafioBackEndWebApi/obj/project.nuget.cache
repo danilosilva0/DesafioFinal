@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "D+uji0vhXpzLB2XVdXQDZFTCPtTVlbjnxbvvxul86d+hHmVgNr8b3lxdaDI0/S6dIup6LM3xlV421sNkf5C5eA==",
+  "dgSpecHash": "Lax/pYXmkWQ+RunptJSar/eXiFmJl0uvwwGSgSsnG3yEgD5uDbZ4FZkVPvJgaDeTzb/sXGkXJB2KB8e+TppCPQ==",
   "success": true,
   "projectFilePath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/DesafioBackEndWebApi.csproj",
   "expectedPackageFiles": [
     "/home/danilo/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/home/danilo/.nuget/packages/azure.identity/1.11.3/azure.identity.1.11.3.nupkg.sha512",
     "/home/danilo/.nuget/packages/log4net/2.0.17/log4net.2.0.17.nupkg.sha512",
+    "/home/danilo/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.29/microsoft.aspnetcore.authentication.jwtbearer.6.0.29.nupkg.sha512",
     "/home/danilo/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/home/danilo/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/home/danilo/.nuget/packages/microsoft.data.sqlclient/5.2.1/microsoft.data.sqlclient.5.2.1.nupkg.sha512",

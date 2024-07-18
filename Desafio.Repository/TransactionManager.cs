@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
 using Desafio.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace Desafio.Repository
 {
@@ -24,7 +20,7 @@ namespace Desafio.Repository
             {
                 var connection = _contexto.Database.GetDbConnection();
                 if (connection.State == ConnectionState.Closed)
-                    await connection.OpenAsync();
+                    connection.Open();
 
                 var transaction = await connection.BeginTransactionAsync(isolationLevel);
                 await _contexto.Database.UseTransactionAsync(transaction);
@@ -39,11 +35,8 @@ namespace Desafio.Repository
                 await _contexto.SaveChangesAsync();
 
             var activeTransaction = _contexto.Database.CurrentTransaction;
-            if (activeTransaction != null)
-            {
-                await activeTransaction.CommitAsync();
-                await activeTransaction.DisposeAsync();
-            }
+            await activeTransaction.CommitAsync();
+            await activeTransaction.DisposeAsync();
         }
 
         public async Task RollbackTransactionsAsync()

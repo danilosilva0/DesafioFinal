@@ -10,6 +10,5 @@ namespace Desafio.Entity.Model
     {
     public string Nome { get; set; }
     public DateTime DataNascimento { get; set; }
-    public DateTime DataCriacao { get; set; }
     }
 }

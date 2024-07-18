@@ -21,16 +21,16 @@ namespace Desafio.Repository.Map
                    .IsRequired();
 
             builder.Property(e => e.Nome)
-                   .HasColumnName("nome_paciente")
+                   .HasColumnName("dsc_nome")
                    .HasMaxLength(100)
                    .IsRequired();
 
             builder.Property(e => e.DataNascimento)
-                   .HasColumnName("data_nascimento")
+                   .HasColumnName("dat_nascimento")
                    .IsRequired();
 
             builder.Property(e => e.DataCriacao)
-                   .HasColumnName("data_criacao")
+                   .HasColumnName("dat_criacao")
                    .IsRequired();
         }
     }

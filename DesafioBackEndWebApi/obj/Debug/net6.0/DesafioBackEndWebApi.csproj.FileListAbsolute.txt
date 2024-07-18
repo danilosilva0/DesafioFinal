@@ -30,6 +30,7 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Azure.Core.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Azure.Identity.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/log4net.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Microsoft.Data.SqlClient.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
@@ -53,6 +54,7 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/System.ClientModel.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/System.Configuration.ConfigurationManager.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/System.Drawing.Common.dll
@@ -114,4 +116,3 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/obj/Debug/net6.0/ref/DesafioBackEndWebApi.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/obj/Debug/net6.0/DesafioBackEndWebApi.pdb
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/obj/Debug/net6.0/DesafioBackEndWebApi.genruntimeconfig.cache
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/DesafioBackEndWebApi/bin/Debug/net6.0/System.ClientModel.dll

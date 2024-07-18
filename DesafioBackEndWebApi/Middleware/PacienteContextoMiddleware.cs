@@ -42,7 +42,7 @@ namespace DesafioBackEndWebApi.Middleware
 
         private static JwtSecurityToken GetSecurityToken(HttpContext context)
         {
-            var authToken = context.Request.Headers["Authorization"].ToString();
+            var authToken = context.Request.Headers["Autorização"].ToString();
 
             if (!string.IsNullOrEmpty(authToken))
             {
@@ -55,7 +55,7 @@ namespace DesafioBackEndWebApi.Middleware
 
         private static bool IsAuthenticated(HttpContext context)
         {
-            var authToken = context.Request.Headers["Authorization"].ToString();
+            var authToken = context.Request.Headers["Autorização"].ToString();
 
             if (!string.IsNullOrEmpty(authToken))
                 return (context.User?.Identity?.IsAuthenticated ?? false) || !string.IsNullOrEmpty(authToken);

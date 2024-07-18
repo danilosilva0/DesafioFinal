@@ -1,10 +1,3 @@
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.AssemblyReference.cache
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.GeneratedMSBuildEditorConfig.editorconfig
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfoInputs.cache
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfo.cs
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.CoreCompileInputs.cache
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cs
-/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/Desafio.Helper.deps.json
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/Desafio.Helper.runtimeconfig.json
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/appsettings.Development.json
@@ -47,6 +40,13 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/Desafio.Service.Interface.pdb
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/Desafio.Validators.pdb
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/bin/Debug/net6.0/Desafio.Entity.pdb
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.AssemblyReference.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.GeneratedMSBuildEditorConfig.editorconfig
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfoInputs.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.AssemblyInfo.cs
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.csproj.CoreCompileInputs.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cs
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/Desafio.Service.MvcApplicationPartsAssemblyInfo.cache
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/staticwebassets.build.json
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/staticwebassets.development.json
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/obj/Debug/net6.0/scopedcss/bundle/Desafio.Service.styles.css

@@ -31,7 +31,9 @@ namespace DesafioBackEndWebApi
 
             // services.AddFluentConfiguration();
 
-            // services.AddAuthorizationConfiguration(Configuration);
+            //Acredito que o JWT/autorização/autenticação esteja impedindo de alguma forma que o sistema execute suas funções
+            //básicas, por isso comentei
+            // services.AddAutorizacaoConfiguration(Configuration);
 
             services.AddSwaggerGen(c =>
             {
@@ -46,15 +48,15 @@ namespace DesafioBackEndWebApi
                     TermsOfService = new Uri("http://google.com.br")
                 });
 
-                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-                {
-                    In = ParameterLocation.Header,
-                    Description = "Insira o token",
-                    Name = "Authorization",
-                    Type = SecuritySchemeType.ApiKey
-                });
+                // c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                // {
+                //     In = ParameterLocation.Header,
+                //     Description = "Insira o token",
+                //     Name = "Autorização",
+                //     Type = SecuritySchemeType.ApiKey
+                // });
 
-                c.AddSecurityRequirement(new() { { new() { Reference = new() { Type = ReferenceType.SecurityScheme, Id = "Bearer" } }, Array.Empty<string>() } });
+                // c.AddSecurityRequirement(new() { { new() { Reference = new() { Type = ReferenceType.SecurityScheme, Id = "Bearer" } }, Array.Empty<string>() } });
             });
         }
 
@@ -74,8 +76,8 @@ namespace DesafioBackEndWebApi
 
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            // app.UseAuthentication();
+            // app.UseAuthorization();
 
             app.UseMiddleware<ApiMiddleware>();
             app.UseMiddleware<PacienteContextoMiddleware>();

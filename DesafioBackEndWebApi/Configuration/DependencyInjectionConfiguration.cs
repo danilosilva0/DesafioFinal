@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Desafio.Repository.Interface;
 using Desafio.Repository;
 using Desafio.Helper.PacienteContexto;
+using Desafio.Helper.Configuracoes;
 
 namespace DesafioBackEndWebApi.Configuration
 {
@@ -25,7 +26,7 @@ namespace DesafioBackEndWebApi.Configuration
 
             services.AddScoped<ITransactionManager, TransactionManager>();
             services.AddScoped<IPacienteContexto, PacienteContexto>();
-            // services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
+            services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
         }
 
         private static void InjectMiddleware(IServiceCollection services)

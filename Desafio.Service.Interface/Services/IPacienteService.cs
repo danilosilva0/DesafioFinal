@@ -9,9 +9,9 @@ namespace Desafio.Service.Interface.Services
 {
     public interface IPacienteService
     {
-        void InserirPaciente(PacienteModel novoPaciente);
-        void AlterarPaciente(int id, PacienteModel pacienteAtualizado);
-        void DeletarPaciente(int id);
+        Task InserirPaciente(PacienteModel novoPaciente);
+        Task AlterarPaciente(int id, PacienteModel pacienteAtualizado);
+        Task DeletarPaciente(int id);
         Task<PacienteDTO> ObterPacientePorId(int id);
         Task<List<PacienteDTO>> ListarPacientes();
     }

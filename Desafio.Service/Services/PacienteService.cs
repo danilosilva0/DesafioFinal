@@ -24,7 +24,7 @@ namespace Desafio.Service.Services
             _pacienteRepository = pacienteRepository;
         }
 
-        public async void InserirPaciente(PacienteModel novoPaciente)
+        public async Task InserirPaciente(PacienteModel novoPaciente)
         {
             var pacienteDTO = await _pacienteRepository.BuscarPorNome(novoPaciente.Nome);
 
@@ -53,7 +53,7 @@ namespace Desafio.Service.Services
             return paciente;
         }
 
-        public async void AlterarPaciente(int id, PacienteModel pacienteAtualizado)
+        public async Task AlterarPaciente(int id, PacienteModel pacienteAtualizado)
         {
             ValidarPaciente(pacienteAtualizado.Nome);
             var paciente = await _pacienteRepository.ObterPorId(id);
@@ -72,7 +72,7 @@ namespace Desafio.Service.Services
             }
         }
 
-        public async void DeletarPaciente(int id)
+        public async Task DeletarPaciente(int id)
         {
             var paciente = await _pacienteRepository.ObterPorId(id);
 

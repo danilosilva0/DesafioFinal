@@ -25,20 +25,20 @@ namespace Desafio.Repository.Map
                    .IsRequired();
 
             builder.Property(e => e.DataAgendamento)
-                   .HasColumnName("data_agendamento")
+                   .HasColumnName("dat_agendamento")
                    .IsRequired();
 
             builder.Property(e => e.HoraAgendamento)
-                   .HasColumnName("hora_agendamento")
+                   .HasColumnName("hor_agendamento")
                    .IsRequired();
 
             builder.Property(e => e.Status)
-                   .HasColumnName("status")
+                   .HasColumnName("dsc_status")
                    .HasMaxLength(20)
                    .IsRequired();
 
             builder.Property(e => e.DataCriacao)
-                   .HasColumnName("data_criacao")
+                   .HasColumnName("dat_criacao")
                    .IsRequired();
 
             builder.HasOne(e => e.Paciente)

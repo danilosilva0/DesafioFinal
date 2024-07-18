@@ -26,18 +26,18 @@ namespace DesafioBackEndWebApi.Controllers
         }
 
         [HttpPost("InserirPaciente")]
-        public void InserirPaciente(PacienteModel novoPaciente){
-            _pacienteService.InserirPaciente(novoPaciente);
+        public async Task InserirPaciente(PacienteModel novoPaciente){
+            await _pacienteService.InserirPaciente(novoPaciente);
         }
 
         [HttpPut("AlterarPaciente")]
-        public void AlterarPaciente(int id, PacienteModel pacienteModel){
-            _pacienteService.AlterarPaciente(id, pacienteModel);
+        public async Task AlterarPaciente(int id, PacienteModel pacienteModel){
+            await _pacienteService.AlterarPaciente(id, pacienteModel);
         }
 
         [HttpDelete("DeletarPaciente")]
-        public void DeletarPaciente(int id){
-            _pacienteService.DeletarPaciente(id);
+        public async Task DeletarPaciente(int id){
+            await _pacienteService.DeletarPaciente(id);
         }
     }
 }
