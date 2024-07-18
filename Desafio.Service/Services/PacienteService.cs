@@ -11,7 +11,7 @@ using Desafio.Entity.DTO;
 using Desafio.Repository.Interface.IRepositories;
 using log4net;
 using Desafio.Entity.Entities;
-using ControleTarefas.Helper.Messages;
+using Desafio.Helper.Messages;
 
 namespace Desafio.Service.Services
 {

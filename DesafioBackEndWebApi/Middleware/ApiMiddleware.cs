@@ -15,7 +15,7 @@ using log4net;
 using Desafio.Helper.Attributes;
 using Desafio.Helper.Responses;
 using Desafio.Helper.Exceptions;
-using ControleTarefas.Helper.Messages;
+using Desafio.Helper.Messages;
 
 namespace DesafioBackEndWebApi.Middleware
 {

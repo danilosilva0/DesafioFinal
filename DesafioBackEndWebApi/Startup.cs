@@ -9,7 +9,6 @@ using System;
 using DesafioBackEndWebApi.Configuration;
 using DesafioBackEndWebApi.Middleware;
 using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
 
 
 namespace DesafioBackEndWebApi
@@ -41,8 +40,8 @@ namespace DesafioBackEndWebApi
                 {
                     Title = "Sistema de Agendamento de Vacinação",
                     Version = "v1",
-                    Description = "APIs para agendamento de vacinação contra COVID-19.",
-                    Contact = new() { Name = "Danilo Silva", Url = new Uri("http://google.com.br") },
+                    Description = "API para agendamento de vacinação contra COVID-19.",
+                    Contact = new() { Name = "Danilo Silva - Github", Url = new Uri("https://github.com/danilosilva0") },
                     License = new() { Name = "Private", Url = new Uri("http://google.com.br") },
                     TermsOfService = new Uri("http://google.com.br")
                 });

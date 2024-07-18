@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ControleTarefas.Helper.Messages {
+namespace Desafio.Helper.Messages {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ControleTarefas.Helper.Messages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ControleTarefas.Helper.Messages.ServiceMessages", typeof(ServiceMessages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Desafio.Helper.Messages.ServiceMessages", typeof(ServiceMessages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
