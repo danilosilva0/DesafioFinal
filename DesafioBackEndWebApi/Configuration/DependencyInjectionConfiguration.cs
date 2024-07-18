@@ -22,11 +22,11 @@ namespace DesafioBackEndWebApi.Configuration
         {
             InjectRepository(services);
             InjectService(services);
-            InjectMiddleware(services);
+            // InjectMiddleware(services);
 
             services.AddScoped<ITransactionManager, TransactionManager>();
-            services.AddScoped<IPacienteContexto, PacienteContexto>();
-            services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
+            // services.AddScoped<IPacienteContexto, PacienteContexto>();
+            // services.AddOptions<AutenticacaoConfig>().Bind(configuracao.GetSection("Authorization"));
         }
 
         private static void InjectMiddleware(IServiceCollection services)

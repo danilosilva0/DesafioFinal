@@ -12,5 +12,6 @@ namespace Desafio.Repository.Interface.IRepositories
         Task<List<PacienteDTO>> ListarTodos();
         Task<Paciente> ObterPorNome(string nome);
         Task<List<PacienteDTO>> BuscarPorNome(string nome);
+        Task<Paciente?> ObterPorId(int id);
     }
 }

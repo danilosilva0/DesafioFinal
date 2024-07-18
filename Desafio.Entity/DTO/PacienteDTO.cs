@@ -10,6 +10,5 @@ namespace Desafio.Entity.DTO
     public int? IdPaciente { get; set; }
     public string? Nome { get; set; }
     public DateTime? DataNascimento { get; set; }
-    public DateTime? DataCriacao { get; set; }
     }
 }

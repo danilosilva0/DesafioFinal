@@ -12,6 +12,5 @@ namespace Desafio.Entity.DTO
     public DateTime DataAgendamento { get; set; }
     public TimeSpan HoraAgendamento { get; set; }
     public string Status { get; set; }
-    public DateTime? DataCriacao { get; set; }
     }
 }

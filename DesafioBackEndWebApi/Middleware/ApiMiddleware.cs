@@ -7,10 +7,6 @@ using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Net;
 using Desafio.Repository.Interface;
-// using Desafio.Helper.Attributes;
-// using Desafio.Helper.Exceptions;
-// using Desafio.Helper.Messages;
-// using Desafio.Helper.Responses;
 using log4net;
 using Desafio.Helper.Attributes;
 using Desafio.Helper.Responses;
@@ -39,9 +35,7 @@ namespace DesafioBackEndWebApi.Middleware
                 if (transactionRequired != null)
                 {
                     await _transactionManager.BeginTransactionAsync(transactionRequired.IsolationLevel);
-
                     await next.Invoke(context);
-
                     await _transactionManager.CommitTransactionsAsync();
                 }
                 else

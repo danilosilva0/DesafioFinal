@@ -19,15 +19,5 @@ namespace Desafio.Repository
             base.OnModelCreating(modelBuilder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("database=dbdesafio;server=localhost\\sqlexpress;Trusted_Connection=True;Trust Server Certificate=true", options =>
-                {
-                    options.UseRelationalNulls();
-                });
-            }
-        }
     }
 }

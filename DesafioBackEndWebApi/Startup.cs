@@ -29,6 +29,10 @@ namespace DesafioBackEndWebApi
 
             services.AddDatabaseConfiguration(Configuration);
 
+            services.AddTransient<ApiMiddleware>();
+
+            services.AddTransient<PacienteContextoMiddleware>();
+
             // services.AddFluentConfiguration();
 
             //Acredito que o JWT/autorização/autenticação esteja impedindo de alguma forma que o sistema execute suas funções
@@ -79,8 +83,8 @@ namespace DesafioBackEndWebApi
             // app.UseAuthentication();
             // app.UseAuthorization();
 
-            app.UseMiddleware<ApiMiddleware>();
-            app.UseMiddleware<PacienteContextoMiddleware>();
+            // app.UseMiddleware<ApiMiddleware>();
+            // app.UseMiddleware<PacienteContextoMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

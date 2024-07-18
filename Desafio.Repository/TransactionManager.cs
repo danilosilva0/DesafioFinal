@@ -32,11 +32,19 @@ namespace Desafio.Repository
             var contextHasChanges = _contexto.ChangeTracker.HasChanges();
 
             if (contextHasChanges)
+            {
                 await _contexto.SaveChangesAsync();
+            }
+            else
+            {
+                var activeTransaction = _contexto.Database.CurrentTransaction;
+                if (activeTransaction != null)
+                    await activeTransaction.CommitAsync();
+            }
 
-            var activeTransaction = _contexto.Database.CurrentTransaction;
-            await activeTransaction.CommitAsync();
-            await activeTransaction.DisposeAsync();
+            var transactionToDispose = _contexto.Database.CurrentTransaction;
+            if (transactionToDispose != null)
+                await transactionToDispose.DisposeAsync();
         }
 
         public async Task RollbackTransactionsAsync()

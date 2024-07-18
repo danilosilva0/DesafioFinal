@@ -100,7 +100,6 @@ namespace Desafio.Service.Services
                 IdPaciente = paciente.IdPaciente,
                 Nome = paciente.Nome,
                 DataNascimento = paciente.DataNascimento,
-                DataCriacao = paciente.DataCriacao
             };
         }
 
@@ -116,7 +115,6 @@ namespace Desafio.Service.Services
                     IdPaciente = paciente.IdPaciente,
                     Nome = paciente.Nome,
                     DataNascimento = paciente.DataNascimento,
-                    DataCriacao = paciente.DataCriacao
                 });
             }
 

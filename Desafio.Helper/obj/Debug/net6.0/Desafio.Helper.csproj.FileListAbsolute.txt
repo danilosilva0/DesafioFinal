@@ -27,3 +27,4 @@
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/ref/Desafio.Helper.dll
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.pdb
 /home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.genruntimeconfig.cache
+/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/Debug/net6.0/Desafio.Helper.csproj.AssemblyReference.cache
