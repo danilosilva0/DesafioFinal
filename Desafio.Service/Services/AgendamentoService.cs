@@ -38,7 +38,7 @@ namespace Desafio.Service.Services
             // }
         }
 
-        public async void InserirAgendamento(AgendamentoModel novoAgendamento)
+        public async Task InserirAgendamento(AgendamentoModel novoAgendamento)
         {
             // ValidarAgendamento(novoAgendamento.Titulo);
 
@@ -67,7 +67,7 @@ namespace Desafio.Service.Services
             return agendamento;
         }
 
-        public async void AlterarAgendamento(AgendamentoModel novoAgendamento)
+        public async Task AlterarAgendamento(AgendamentoModel novoAgendamento)
         {
             ValidarAgendamento(novoAgendamento);
             var agendamento = await _agendamentoRepository.ObterAgendamentoPorId(novoAgendamento.IdAgendamento);
@@ -88,7 +88,7 @@ namespace Desafio.Service.Services
             }
         }
 
-        public async void DeletarAgendamento(int id)
+        public async Task DeletarAgendamento(int id)
         {
             var agendamento = await _agendamentoRepository.ObterAgendamentoPorId(id);
 
@@ -109,7 +109,7 @@ namespace Desafio.Service.Services
             if (novoAgendamento.DataAgendamento < DateTime.Now)
                 throw new ServiceException(string.Format(ServiceMessages.InvalidInput, "Data do Agendamento"));
 
-            if (novoAgendamento.HoraAgendamento < DateTime.Now.TimeOfDay)
+            if (novoAgendamento.DataAgendamento < DateTime.Now && novoAgendamento.HoraAgendamento < DateTime.Now.TimeOfDay)
                 throw new ServiceException(string.Format(ServiceMessages.InvalidInput, "Hopa do Agendamento"));
         }
     }

@@ -9,9 +9,9 @@ namespace Desafio.Service.Interface.Services
 {
     public interface IAgendamentoService
     {
-        void InserirAgendamento(AgendamentoModel novoAgendamento);
-        void AlterarAgendamento(AgendamentoModel novoAgendamento);
-        void DeletarAgendamento(int id);
+        Task InserirAgendamento(AgendamentoModel novoAgendamento);
+        Task AlterarAgendamento(AgendamentoModel novoAgendamento);
+        Task DeletarAgendamento(int id);
         Task<List<AgendamentoDTO>> ListarAgendamentos();
     }
 }
