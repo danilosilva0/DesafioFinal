@@ -4,6 +4,258 @@
     "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/Desafio.Service.csproj": {}
   },
   "projects": {
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj",
+        "projectName": "Desafio.Entity",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj",
+        "packagesPath": "/home/danilo/.nuget/packages/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/danilo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj",
+        "projectName": "Desafio.Helper",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj",
+        "packagesPath": "/home/danilo/.nuget/packages/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/danilo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj",
+        "projectName": "Desafio.Repository.Interface",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj",
+        "packagesPath": "/home/danilo/.nuget/packages/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/danilo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj",
+        "projectName": "Desafio.Service.Interface",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj",
+        "packagesPath": "/home/danilo/.nuget/packages/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/danilo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/Desafio.Service.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -25,7 +277,92 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Repository.Interface/Desafio.Repository.Interface.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service.Interface/Desafio.Service.Interface.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.128/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj",
+        "projectName": "Desafio.Validators",
+        "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/Desafio.Validators.csproj",
+        "packagesPath": "/home/danilo/.nuget/packages/",
+        "outputPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Validators/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/danilo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+              },
+              "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+                "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

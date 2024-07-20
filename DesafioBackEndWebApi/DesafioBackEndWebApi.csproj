@@ -7,7 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="log4net" Version="2.0.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.29" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="tusdotnet" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Desafio.Entity\Desafio.Entity.csproj" />
+    <ProjectReference Include="..\Desafio.Helper\Desafio.Helper.csproj" />
+    <ProjectReference Include="..\Desafio.Repository\Desafio.Repository.csproj" />
+    <ProjectReference Include="..\Desafio.Repository.Interface\Desafio.Repository.Interface.csproj" />
+    <ProjectReference Include="..\Desafio.Service\Desafio.Service.csproj" />
+    <ProjectReference Include="..\Desafio.Service.Interface\Desafio.Service.Interface.csproj" />
+    <ProjectReference Include="..\Desafio.Validators\Desafio.Validators.csproj" />
   </ItemGroup>
 
 </Project>

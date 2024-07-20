@@ -72,6 +72,38 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Desafio.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/Desafio.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Desafio.Entity.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Desafio.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Swashbuckle.AspNetCore": "6.5.0"
+        },
+        "compile": {
+          "bin/placeholder/Desafio.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Desafio.Helper.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -413,10 +445,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Desafio.Entity/1.0.0": {
+      "type": "project",
+      "path": "../Desafio.Entity/Desafio.Entity.csproj",
+      "msbuildProject": "../Desafio.Entity/Desafio.Entity.csproj"
+    },
+    "Desafio.Helper/1.0.0": {
+      "type": "project",
+      "path": "../Desafio.Helper/Desafio.Helper.csproj",
+      "msbuildProject": "../Desafio.Helper/Desafio.Helper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Desafio.Entity >= 1.0.0",
+      "Desafio.Helper >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -444,7 +488,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj": {
+              "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Entity/Desafio.Entity.csproj"
+            },
+            "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj": {
+              "projectPath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Helper/Desafio.Helper.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

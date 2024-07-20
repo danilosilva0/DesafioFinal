@@ -1,15 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "WCXK9fYev+y5i7upVokNEfWL64hyr+zr1DDP/xA0xZIBuYATYaQY1xVsvCrvuOYbXDjnyMfFcwJXKq1STvxuQg==",
+  "dgSpecHash": "BEIilVwx6Br9UYl3eDLTL7omByQCH6tNJnHxb9JTEl0KsERNUdfnqzD0nGbwtg5sfrYCJFYelutw4H2guXKVWA==",
   "success": true,
   "projectFilePath": "/home/danilo/Dokumente/EstagioPitang/DesafioFinalBack/Desafio.Service/Desafio.Service.csproj",
   "expectedPackageFiles": [
+    "/home/danilo/.nuget/packages/log4net/2.0.17/log4net.2.0.17.nupkg.sha512",
     "/home/danilo/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/danilo/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/home/danilo/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/home/danilo/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "/home/danilo/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/system.configuration.configurationmanager/4.5.0/system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/system.security.accesscontrol/4.5.0/system.security.accesscontrol.4.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/system.security.cryptography.protecteddata/4.5.0/system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/system.security.permissions/4.5.0/system.security.permissions.4.5.0.nupkg.sha512",
+    "/home/danilo/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
