@@ -131,5 +131,29 @@ namespace Desafio.Helper.Messages {
                 return ResourceManager.GetString("SuccessfulOperation", resourceCulture);
             }
         }
+
+        public static string SuccessfulInsertion { 
+            get {
+                return ResourceManager.GetString("SuccessfulInsertion", resourceCulture);
+            }
+        }
+
+        public static string SuccessfulChange {
+            get {
+                return ResourceManager.GetString("SuccessfulChange", resourceCulture);
+            }
+        }
+
+        public static string ServiceExecutedSuccessfully {
+            get {
+                return ResourceManager.GetString("ServiceExecutedSuccessfully", resourceCulture);
+            }
+        }
+
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
     }
 }

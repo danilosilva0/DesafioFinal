@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Desafio.Service.Interface;
-using Desafio.Repository.Interface;
 using Desafio.Helper.Exceptions;
 using Desafio.Service.Interface.Services;
 using Desafio.Entity.Model;
@@ -38,7 +32,7 @@ namespace Desafio.Service.Services
 
             await _pacienteRepository.Inserir(paciente);
 
-            //_log.InfoFormat("A tarefa '{0}' foi inserida.", novaTarefa); 
+            _log.InfoFormat(ServiceMessages.SuccessfulInsertion, novoPaciente.Nome); 
         }
 
         private static Paciente CriarPaciente(PacienteModel novoPaciente)
@@ -63,12 +57,12 @@ namespace Desafio.Service.Services
                 paciente.Nome = pacienteAtualizado.Nome;
                 paciente.DataNascimento = pacienteAtualizado.DataNascimento;
                 await _pacienteRepository.Atualizar(paciente);
-                _log.InfoFormat("O paciente com ID '{0}' foi atualizado.", id);
+                _log.InfoFormat(ServiceMessages.SuccessfulOperation, id);
             }
             else
             {
-                _log.InfoFormat("O paciente com ID '{0}' não existe.", id);
-                throw new ServiceException($"O paciente com ID '{id}' não existe.");
+                _log.InfoFormat(ServiceMessages.RegisterNotFound, id);
+                throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, "id"));
             }
         }
 
@@ -79,11 +73,11 @@ namespace Desafio.Service.Services
             if (paciente != null)
             {
                 await _pacienteRepository.Deletar(paciente);
-                _log.InfoFormat("O paciente com ID '{0}' foi removido.", id);
+                _log.InfoFormat(ServiceMessages.RemovedRegister, id);
             }
             else
             {
-                _log.InfoFormat("O paciente com ID '{0}' não existe.", id);
+                _log.InfoFormat(ServiceMessages.RegisterNotFound, id);
                 throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, id));
             }
         }

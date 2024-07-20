@@ -44,7 +44,7 @@ namespace DesafioBackEndWebApi.Middleware
                 }
 
                 stopwatch.Stop();
-                _log.InfoFormat("Service executed successfully: {0} {1} [{2} ms]", context.Request.Method, context.Request.Path, stopwatch.ElapsedMilliseconds);
+                _log.InfoFormat(ServiceMessages.ServiceExecutedSuccessfully, context.Request.Method, context.Request.Path, stopwatch.ElapsedMilliseconds);
             }
             catch (Exception ex)
             {

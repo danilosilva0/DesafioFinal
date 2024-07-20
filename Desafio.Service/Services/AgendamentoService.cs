@@ -51,7 +51,7 @@ namespace Desafio.Service.Services
 
             await _agendamentoRepository.Inserir(agendamento);
 
-            // _log.InfoFormat("O agendamento '{0}' foi inserida.", novoAgendamento);
+            _log.InfoFormat(ServiceMessages.SuccessfulInsertion, novoAgendamento);
         }
 
         private static Agendamento CriarAgendamento(AgendamentoModel novoAgendamento)
@@ -79,12 +79,12 @@ namespace Desafio.Service.Services
                 agendamento.HoraAgendamento = novoAgendamento.HoraAgendamento;
                 agendamento.Status = novoAgendamento.Status;
                 await _agendamentoRepository.Atualizar(agendamento);
-                _log.InfoFormat("O agendamento '{0}' foi atualizado para o nome {1}.", agendamento.IdAgendamento, novoAgendamento.IdAgendamento);
+                _log.InfoFormat(ServiceMessages.SuccessfulChange, agendamento.IdAgendamento, novoAgendamento.IdAgendamento);
             }
             else
             {
-                _log.InfoFormat("O agendamento '{0}' não existe na base.", novoAgendamento.IdAgendamento);
-                throw new ServiceException($"O agendamento '{novoAgendamento.IdAgendamento}' não existe na base.");
+                _log.InfoFormat(ServiceMessages.RegisterNotFound, novoAgendamento.IdAgendamento);
+                throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, novoAgendamento.IdAgendamento));
             }
         }
 
@@ -95,11 +95,11 @@ namespace Desafio.Service.Services
             if (agendamento != null)
             {
                 await _agendamentoRepository.Deletar(agendamento);
-                _log.InfoFormat("A agendamento '{0}' foi removida.", id);
+                _log.InfoFormat(ServiceMessages.RemovedRegister, id);
             }
             else
             {
-                _log.InfoFormat("A agendamento '{0}' não existe na base.", id);
+                _log.InfoFormat(ServiceMessages.RegisterNotFound, id);
                 throw new ServiceException(string.Format(ServiceMessages.RegisterNotFound, id));
             }
         }

@@ -33,6 +33,17 @@ namespace DesafioBackEndWebApi
 
             services.AddTransient<PacienteContextoMiddleware>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+            });
+
             // services.AddFluentConfiguration();
 
             //Acredito que o JWT/autorização/autenticação esteja impedindo de alguma forma que o sistema execute suas funções
@@ -79,6 +90,8 @@ namespace DesafioBackEndWebApi
             });
 
             app.UseRouting();
+
+            app.UseCors("AllowAll");
 
             // app.UseAuthentication();
             // app.UseAuthorization();
